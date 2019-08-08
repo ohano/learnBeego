@@ -1,0 +1,1 @@
+ace.auto_hide_sidebar=function($){$(document).on(ace.click_event+".ace.hide",function(e){var toggler=$("#menu-toggler");if(toggler.length==0||toggler[0].scrollHeight==0||!toggler.hasClass("display")){return}var sidebar=$("#sidebar");if($.contains(sidebar[0],e.target)){e.stopPropagation();return}sidebar.removeClass("display");toggler.removeClass("display")})};

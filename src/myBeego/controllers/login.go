@@ -12,6 +12,8 @@ type LoginController struct {
 func (l *LoginController) GetLogin()  {
 	l.Data["username"] = "admin"
 	l.Data["password"] = "xm123123"
+	csrfToken := l.XSRFToken()
+	l.Data["token"] = csrfToken
 	l.TplName = "login.tpl"
 }
 

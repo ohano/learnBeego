@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98e8aa86-e5cc-4826-8ef5-63a80eb3979a" name="Default Changelist" comment="" />
+    <list default="true" id="98e8aa86-e5cc-4826-8ef5-63a80eb3979a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/myBeego.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/myBeego.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myBeego/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/myBeego/conf/app.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myBeego/controllers/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/myBeego/controllers/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myBeego/myBeego.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/myBeego/myBeego.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myBeego/static/css/backstage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/myBeego/static/css/backstage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myBeego/views/login.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/src/myBeego/views/login.tpl" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +32,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/myBeego/views/login.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            <state relative-caret-position="352">
+              <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/myBeego/controllers/login.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="264">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="e#21#66#0" expanded="true" />
               </folding>
@@ -55,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/myBeego/conf/app.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -118,11 +131,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Controller</find>
+      <find>back</find>
+      <find>flower</find>
+      <find>bootstrap.min.js</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="E:\go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/github.com/astaxie/beego" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="urls">
@@ -138,15 +154,16 @@
         <option value="$PROJECT_DIR$/src/myBeego/main.go" />
         <option value="$PROJECT_DIR$/src/myBeego/controllers/default.go" />
         <option value="$PROJECT_DIR$/src/myBeego/routers/router.go" />
-        <option value="$PROJECT_DIR$/src/myBeego/views/login.tpl" />
-        <option value="$PROJECT_DIR$/src/myBeego/controllers/login.go" />
         <option value="$PROJECT_DIR$/src/myBeego/conf/app.conf" />
+        <option value="$PROJECT_DIR$/src/myBeego/static/css/backstage.css" />
+        <option value="$PROJECT_DIR$/src/myBeego/controllers/login.go" />
+        <option value="$PROJECT_DIR$/src/myBeego/views/login.tpl" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="970" />
-    <option name="y" value="104" />
+    <option name="x" value="150" />
+    <option name="y" value="483" />
     <option name="width" value="1400" />
     <option name="height" value="920" />
   </component>
@@ -196,34 +213,6 @@
             </path>
             <path>
               <item name="gobeego" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gobeego" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="myBeego" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gobeego" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gobeego" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="myBeego" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gobeego" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gobeego" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="myBeego" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gobeego" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gobeego" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="myBeego" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gobeego" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -240,6 +229,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="true" />
@@ -276,6 +266,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1673774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -290,7 +281,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34924078" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34924078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -373,27 +364,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myBeego/views/login.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/controller.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="89" column="7" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/myBeego/controllers/login.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#21#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -410,7 +384,34 @@
     <entry file="file://$PROJECT_DIR$/src/myBeego/conf/app.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myBeego/static/css/backstage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="563" selection-start-line="1" selection-start-column="563" selection-end-line="1" selection-end-column="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myBeego/controllers/login.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="e#21#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myBeego/views/login.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
