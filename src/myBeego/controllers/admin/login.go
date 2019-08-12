@@ -3,7 +3,8 @@ package admin
 import (
 	"fmt"
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
+	"myBeego/models/admin"
+	"strconv"
 )
 
 type LoginController struct {
@@ -21,8 +22,11 @@ func (l *LoginController) GetLogin()  {
 func (l *LoginController) PostLogin() {
 	l.Data["username"] = l.GetString("username")
 	l.Data["password"] = l.Ctx.Request.Form.Get("password")
-	l.Ctx.WriteString(l.Data["username"].(string))
-	l.Ctx.WriteString(l.Data["password"].(string))
-	o := orm.NewOrm()
-	fmt.Println(l.Data)
+	//l.Ctx.WriteString(l.Data["username"].(string))
+	//l.Ctx.WriteString(l.Data["password"].(string))
+	id, _ := strconv.Atoi("1")
+	managerInfo, err := admin.GetManagerById(id)
+	fmt.Println(managerInfo, err)
+	//o := orm.NewOrm()
+	//fmt.Println(l.Data)
 }
