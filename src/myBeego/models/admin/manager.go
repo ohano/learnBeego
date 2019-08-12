@@ -2,6 +2,7 @@ package admin
 
 import (
 	"fmt"
+	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )
 
@@ -14,18 +15,24 @@ type Manager struct {
 }
 
 func init() {
-	orm.RegisterModel(new(Manager))
+	orm.RegisterModelWithPrefix(beego.AppConfig.String("DB_PREFIX"), new(Manager))
+}
+
+func (m *Manager) TableName() string {
+	return "manager"
 }
 
 func GetManagerById (id int) (manager *Manager, err error) {
 	o := orm.NewOrm()
-	//manager = &Manager{Id : id}
-	//err = o.Read(&manager)
-	qs := o.QueryTable("xm_manager")
-	err = qs.Filter("id", id).One(&manager)
+	manager = &Manager{Id: id}
+	//manager := new(Manager)
+	err = o.Read(manager)
+	//qs := o.QueryTable(new(Manager))
+	//qs := o.QueryTable(new(Manager))
+	//err = qs.Filter("id", id).One(manager)
 	if err != nil {
 		fmt.Println(err)
 		return nil, err
 	}
-	return manager, nil
+	return manager, err
 }
