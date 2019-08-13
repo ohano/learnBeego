@@ -3,4 +3,4 @@ bin/
 pkg/
 src/github.com/*
 *.exe*
-*/*.conf
+*.conf

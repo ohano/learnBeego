@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/static/ace/css/ace.min.css">
     <link rel="stylesheet" href="/static/ace/css/ace-part2.min.css">
     <link rel="stylesheet" href="/static/ace/css/ace-rtl.min.css">
+{{/*    <link rel="stylesheet" href="/static/layui/css/layui.css">*/}}
     <script src="/static/js/manage/managelogin.js"></script>
     <link rel="stylesheet" href="/static/css/backstage.css">
 </head>
@@ -71,7 +72,7 @@
 
                             <div class="space-6"></div>
 
-                            <form action="/login" method="post">
+                            <form action="/login" method="post" id="postForm">
                                 <input type="hidden" name="_xsrf" value="{{.token}}">
                                 <fieldset>
                                     <label class="block clearfix">
@@ -93,7 +94,7 @@
                                     <div class="space"></div>
 
                                     <div class="clearfix">
-                                        <button type="submit" class=" pull-right btn btn-block btn-primary">
+                                        <button type="button" id="submitForm" class=" pull-right btn btn-block btn-primary">
                                             <span class="bigger-110 ">登　录</span>
                                         </button>
                                     </div>
@@ -114,3 +115,24 @@
 
 </body>
 </html>
+<script type="application/javascript" src="/static/layui/layui.js"></script>
+<script>
+    var layer;
+    layui.use('layer', function () {
+        layer = layui.layer;
+    })
+    $('#submitForm').click(function () {
+        var param = $('#postForm').serialize();
+        $.post('/login', param, function (res) {
+            if (res.code != 1000) {
+                layer.open({
+                    content: res.message
+                });
+                return false;
+            } else {
+                window.location.href = "/manage/index"
+            }
+        })
+    })
+
+</script>

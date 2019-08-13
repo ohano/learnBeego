@@ -1,7 +1,6 @@
 package admin
 
 import (
-	"fmt"
 	"github.com/astaxie/beego"
 	"myBeego/models/admin"
 	"myBeego/utils"
@@ -12,28 +11,35 @@ type LoginController struct {
 }
 
 func (l *LoginController) GetLogin()  {
-	l.Data["username"] = "admin"
-	l.Data["password"] = "xm123123"
 	xsrfToken := l.XSRFToken()
 	l.Data["token"] = xsrfToken
 	l.TplName = "admin/login.tpl"
 	_ = l.Render()
 }
+/**
+登录
+ */
+var (
+	code string = "1001"
+	message string = ""
+	data map[interface{}]interface{} = nil
+)
 
 func (l *LoginController) PostLogin() {
+	//errToken := l.CheckXSRFCookie()
+	//if !errToken {
+	//	utils.DoResponse(&l.Controller, code, "token错误", data)
+	//}
 	username := l.GetString("username")
-	password := l.Ctx.Request.Form.Get("password")
+	password := l.GetString("password")
 	managerInfo, err := admin.GetManagerByUsername(username)
 	if err != nil {
 		l.Abort("Page")
 	}
 	sig := utils.String2Md5(utils.String2Md5(password + managerInfo.Salt))
 	if sig != managerInfo.Password {
-		data := utils.ResponseAjax{}.AjaxReturn("1001", "密码错误", "")
-		fmt.Println(data)
-		l.Data["json"] = data
-		l.ServeJSON()
+		utils.DoResponse(&l.Controller, code, "密码错误", data)
 	}
-	l.Data["json"] = utils.ResponseAjax{}.AjaxReturn("1000", "登录成功", "")
-	l.ServeJSON()
+	code = "1000"
+	utils.DoResponse(&l.Controller, code, "登录成功", data)
 }
