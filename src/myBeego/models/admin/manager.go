@@ -26,10 +26,20 @@ func GetManagerById (id int) (manager *Manager, err error) {
 	o := orm.NewOrm()
 	manager = &Manager{Id: id}
 	//manager := new(Manager)
-	err = o.Read(manager)
+	//err = o.Read(manager)
 	//qs := o.QueryTable(new(Manager))
-	//qs := o.QueryTable(new(Manager))
-	//err = qs.Filter("id", id).One(manager)
+	qs := o.QueryTable(new(Manager))
+	err = qs.Filter("id", id).One(manager)
+	if err != nil {
+		fmt.Println(err)
+		return nil, err
+	}
+	return manager, err
+}
+
+func GetManagerByUsername(username string) (manager *Manager, err error) {
+	manager = &Manager{Username:username}
+	err = orm.NewOrm().QueryTable(new(Manager)).Filter("username", username).One(manager)
 	if err != nil {
 		fmt.Println(err)
 		return nil, err
