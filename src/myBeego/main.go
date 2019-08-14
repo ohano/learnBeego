@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	//beego.BConfig.WebConfig.Session.SessionOn = true
 	beego.ErrorController(&utils.ErrorHandle{})
 	beego.Run()
 }

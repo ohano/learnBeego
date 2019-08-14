@@ -1,13 +1,14 @@
 package admin
 
 import (
-	"github.com/astaxie/beego"
+	"fmt"
+	"myBeego/controllers"
 	"myBeego/models/admin"
 	"myBeego/utils"
 )
 
 type LoginController struct {
-	beego.Controller
+	controllers.AdminBaseController
 }
 
 func (l *LoginController) GetLogin()  {
@@ -22,24 +23,33 @@ func (l *LoginController) GetLogin()  {
 var (
 	code string = "1001"
 	message string = ""
-	data map[interface{}]interface{} = nil
+	data struct{}
 )
 
 func (l *LoginController) PostLogin() {
-	//errToken := l.CheckXSRFCookie()
-	//if !errToken {
-	//	utils.DoResponse(&l.Controller, code, "token错误", data)
-	//}
+	l.XSRFToken()
+	xsrfToken := l.CheckXSRFCookie()
+	fmt.Println(xsrfToken)
+	if !xsrfToken {
+		utils.DoResponse(&l.Controller, code, "token错误", data)
+		return
+	}
 	username := l.GetString("username")
 	password := l.GetString("password")
 	managerInfo, err := admin.GetManagerByUsername(username)
+
+	fmt.Println(err)
 	if err != nil {
-		l.Abort("Page")
+		utils.DoResponse(&l.Controller, code, "用户名或密码错误", data)
+		return
 	}
 	sig := utils.String2Md5(utils.String2Md5(password + managerInfo.Salt))
 	if sig != managerInfo.Password {
-		utils.DoResponse(&l.Controller, code, "密码错误", data)
+		utils.DoResponse(&l.Controller, code, "用户名或密码错误", data)
+		return
 	}
 	code = "1000"
 	utils.DoResponse(&l.Controller, code, "登录成功", data)
+	l.SetSession("manager", managerInfo)
+	return
 }

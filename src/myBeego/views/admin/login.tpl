@@ -130,7 +130,7 @@
                 });
                 return false;
             } else {
-                window.location.href = "/manage/index"
+                // window.location.href = "/manage/index"
             }
         })
     })
