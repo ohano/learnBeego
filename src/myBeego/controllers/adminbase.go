@@ -12,8 +12,6 @@ type AdminBaseController struct {
 }
 
 func (b *AdminBaseController) Prepare()  {
-	sess:=b.StartSession()
-	defer sess.SessionRelease(b.Ctx.ResponseWriter)
 	b.Data["PageStartTime"] = time.Now()
 	b.Data["AppName"] = "hanobeego"
 	//TODO:验证权限，菜单之类
